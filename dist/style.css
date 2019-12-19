@@ -25,7 +25,6 @@ hr {
 }
 
 .presents {
-  display: flex;
   padding-inline-start: 0;
 }
 
@@ -34,6 +33,15 @@ hr {
   border: 1px solid lightgrey;
   padding: 1rem;
   width: 100%;
+  margin: 1rem 0;
+}
+
+.present:first-child {
+  margin-top: 0;
+}
+
+.present:last-child {
+  margin-bottom: 0;
 }
 
 .present__name {
