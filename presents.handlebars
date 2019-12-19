@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Presents for Rob</title>
+</head>
+<body>
+  <h1>🎄 Presents 🎉 for 🎅 Rob 🎁</h1>
+  <p>Check with others before buying if its not from Amazon</p>
+  <h2>
+    <b>
+      <a href="https://www.amazon.co.uk/hz/wishlist/ls/3SHY7IPJFZ1G1?ref_=wl_share">
+        My Amazon wishlist
+      </a>
+    </b>
+  </h2>
+  <hr />
+  <h2>Presents</h2>
+  <ul class="presents">
+    {{#each presents}}
+      <li class="present">
+        <h4 class="present__name">
+          <a href="{{this.url}}" rel="noreferrer noopener" target="_blank">
+            {{this.name}}
+          </a>
+        </h4>
+        <span class="present__notes">{{{this.notes}}}</span>
+        Last updated at {{this.date}}
+      </li>
+    {{/each}}
+  </ul>
+</body>
+</html>
