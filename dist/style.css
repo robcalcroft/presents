@@ -50,3 +50,8 @@ hr {
 .present__notes {
   font-style: italic;
 }
+
+.present__date {
+  margin-top: 1rem;
+  color: lightslategray;
+}

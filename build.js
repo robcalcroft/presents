@@ -1,5 +1,6 @@
 const { createClient } = require('contentful');
 const handlebars = require('handlebars');
+const format = require('date-fns/format');
 const fs = require('fs-extra');
 const showdown = require('showdown');
 
@@ -11,7 +12,7 @@ function getProcessedPresent(present) {
   return {
     ...present.fields,
     notes: htmlNotes,
-    date: new Date(present.sys.updatedAt).toLocaleDateString('en-GB'),
+    date: format(new Date(present.sys.updatedAt), 'dd/MM/yyyy'),
   };
 }
 
